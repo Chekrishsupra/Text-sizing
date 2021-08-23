@@ -1,5 +1,4 @@
-noseX = 0;
-noseY = 0;
+
 difference = 0;
 rightWristX = 0;
 leftWristX = 0;
@@ -16,9 +15,10 @@ poseNet.on('pose',gotPoses);
 
 function draw() {
     background('#4d4949');
-    textSize(leftWristX,rightWristX)
+    textSize(difference);
     fill("#f00e0e");
-    text('Chetan',noseX,noseY)
+    text('Chetan',50,350);
+    document.getElementById("text_sides").innerHTML = "Font size of the text= " + difference + "pixels";
 }
 
 function modelLoaded() {
